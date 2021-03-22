@@ -6,13 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+
+
+
+  
    inputPrueba="";
    textPrueba=""
 
   constructor() {};
 
   logForm(){
+   
 this.textPrueba=this.inputPrueba;
+console.log(this.inputPrueba)
   }
 
 }
