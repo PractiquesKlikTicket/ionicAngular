@@ -7,6 +7,18 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+
+
+  
+   inputPrueba="";
+   textPrueba=""
+
+  constructor() {};
+
+  logForm(){
+   
+this.textPrueba=this.inputPrueba;
+console.log(this.inputPrueba)
+  }
 
 }
