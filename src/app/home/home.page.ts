@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DatosPropComponent} from '../datos-prop/datos-prop.component';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,7 @@ export class HomePage {
 
   
    inputPrueba="";
-   textPrueba=""
+   textPrueba="s"
 
   constructor() {};
 

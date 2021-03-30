@@ -11,10 +11,11 @@ import { HttpClientModule } from "@angular/common/http";
 import { CommonModule } from '@angular/common';
 import {VistaApiComponent} from './vista-api/vista-api.component'
 import { HomePage } from "./home/home.page";
+import { DatosPropComponent } from "./datos-prop/datos-prop.component";
 
 
 @NgModule({
-  declarations: [AppComponent,VistaApiComponent,HomePage],
+  declarations: [AppComponent,VistaApiComponent,HomePage, DatosPropComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule,CommonModule,FormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],

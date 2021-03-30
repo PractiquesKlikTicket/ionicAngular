@@ -3,6 +3,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { VistaApiComponent } from './vista-api/vista-api.component';
 
 import { HomePage } from './home/home.page';
+import { DatosPropComponent} from './datos-prop/datos-prop.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: 'vista',
     component: VistaApiComponent,
+  },
+  {
+    path: 'datosprops',
+    component: DatosPropComponent,
   }
 ];
 
