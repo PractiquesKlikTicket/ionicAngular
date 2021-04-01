@@ -7,7 +7,7 @@ import { Component, OnInit , Input} from '@angular/core';
 })
 export class DatosPropComponent implements OnInit {
 
-@Input() textPrueba:string;
+@Input() textPrueba:object;
 
   constructor() { }
 

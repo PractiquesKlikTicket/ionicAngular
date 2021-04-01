@@ -4,6 +4,7 @@ import { VistaApiComponent } from './vista-api/vista-api.component';
 
 import { HomePage } from './home/home.page';
 import { DatosPropComponent} from './datos-prop/datos-prop.component';
+import { FormularioComponent } from "./formulario/formulario.component";
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'datosprops',
     component: DatosPropComponent,
+  },
+  {
+    path: 'formulario',
+    component: FormularioComponent,
   }
 ];
 

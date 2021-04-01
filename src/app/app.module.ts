@@ -9,13 +9,14 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from "@angular/common/http";
 import { CommonModule } from '@angular/common';
-import {VistaApiComponent} from './vista-api/vista-api.component'
+import {VistaApiComponent} from './vista-api/vista-api.component';
 import { HomePage } from "./home/home.page";
 import { DatosPropComponent } from "./datos-prop/datos-prop.component";
+import { FormularioComponent } from "./formulario/formulario.component";
 
 
 @NgModule({
-  declarations: [AppComponent,VistaApiComponent,HomePage, DatosPropComponent],
+  declarations: [AppComponent,VistaApiComponent,HomePage, DatosPropComponent, FormularioComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule,CommonModule,FormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],

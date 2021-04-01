@@ -12,14 +12,14 @@ export class HomePage {
 
   
    inputPrueba="";
-   textPrueba="s"
+   textPrueba="";
 
   constructor() {};
 
   logForm(){
    
 this.textPrueba=this.inputPrueba;
-console.log(this.inputPrueba)
+console.log(this.inputPrueba);
   }
 
 }
