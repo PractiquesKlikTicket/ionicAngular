@@ -11,7 +11,7 @@
 
   <ion-content id="container">
     
-    <form (ngSubmit)="logForm()">
+    <div>
       <ion-item>
         <ion-label>Input</ion-label>
         <ion-input type="text" [(ngModel)]="form.input" name="input" #input="ngModel"></ion-input>
@@ -26,23 +26,17 @@
     </ion-item>
       <ion-item>
         <ion-label>Select1</ion-label>
-        <ion-select [(ngModel)]="form.option1">
-          <ion-select-option >Opcion 1</ion-select-option>
-          <ion-select-option>Opcion2</ion-select-option>
+        <ion-select [(ngModel)]="form.option">
+          <ion-select-option value="opcion1">Opcion 1</ion-select-option>
+          <ion-select-option value="opcion2">Opcion2</ion-select-option>
         </ion-select>
       </ion-item>
-      <ion-item>
-        <ion-label>Select2</ion-label>
-        <ion-select id="fpago" [(ngModel)]="form.option2">
-          <ion-select-option [value]="0">op1</ion-select-option>
-          <ion-select-option [value]="1">op2</ion-select-option>
-        </ion-select>
-      </ion-item>
+    
       <ion-item>
         <ion-label>Ceckbox</ion-label>
-        <ion-checkbox color="primary" [(ngModel)]="form.checkbox"></ion-checkbox>
+        <ion-checkbox color="primary" [(ngModel)]="form.checkbox" ionChange="checkBoxCheck1()"></ion-checkbox>
       </ion-item>
-      <button ion-button type="submit" block>Añadir</button>
-    </form>
+      <button ion-button (click)="logForm()" block>Añadir</button>
+    </div>
    
   </ion-content>

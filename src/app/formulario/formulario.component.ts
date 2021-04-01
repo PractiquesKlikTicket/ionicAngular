@@ -33,6 +33,13 @@ export class FormularioComponent implements OnInit {
   logForm() {
     console.log(this.form)
     console.log(this.formSelect)
+
+    
+  }
+
+  checkBoxCheck1(){
+
+    this.form.checkbox=true;
   }
 
   checkBoxCheck(){
