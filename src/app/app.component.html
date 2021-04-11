@@ -1,5 +1,5 @@
 <ion-app>
-  
+
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content">
       <ion-header>
@@ -28,16 +28,22 @@
                 Formulario
               </ion-label>
             </ion-item>
+            <ion-item [routerDirection]="'root'" [routerLink]="'/recibirobjeto'">
+              <ion-icon slot="start" [name]="'recibirObjeto'"></ion-icon>
+              <ion-label>
+                Recibir Objeto
+              </ion-label>
+            </ion-item>
           </ion-menu-toggle>
         </ion-list>
       </ion-content>
-    </ion-menu> 
+    </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>
   </ion-split-pane>
 
 
-  
-  
+
+
   <!--<ion-header [translucent]="true">
     <ion-toolbar>
       <ion-title routerLink="/home">
@@ -46,9 +52,9 @@
       <ion-title routerLink="/vista">
         ApiVista
       </ion-title>
-     
+
     </ion-toolbar>
     </ion-header>
   <ion-router-outlet></ion-router-outlet>-->
-  
+
 </ion-app>

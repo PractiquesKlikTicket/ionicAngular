@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { DatosPropComponent} from '../datos-prop/datos-prop.component';
+import { Router } from "@angular/router";
+import { DatosService } from "../datos.service";
 
 
 
@@ -18,14 +20,14 @@ export class FormularioComponent implements OnInit {
     input: '',
     select: '',
     checkbox: false,
-   
+
   };
 
 
 
   @ViewChild(DatosPropComponent) child;
 
-  constructor(public toastController: ToastController) { }
+  constructor(public toastController: ToastController, private router: Router, private datosService:DatosService) { }
 
   ngOnInit() {}
 
@@ -36,13 +38,12 @@ export class FormularioComponent implements OnInit {
     });
     toast.present();
   }
-  
+
   logForm() {
     console.log(this.form)
 
 
-    document.getElementById('enviarForm').addEventListener('click', (event) => {
-      event.preventDefault();
+
 
    if(!this.form.input || this.form.input.length<=3){
 
@@ -65,17 +66,18 @@ export class FormularioComponent implements OnInit {
 
    }
 
-    
-//navigate 
+
+//navigate
+
+this.datosService.setDatos(this.form);
+this.router.navigate(['recibirobjeto'])
 
 
 
 
-    })
-    
   }
 
-  
+
 
   checkBoxCheck(){
     console.log("cambio")

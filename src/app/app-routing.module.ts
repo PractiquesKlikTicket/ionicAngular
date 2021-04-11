@@ -5,6 +5,7 @@ import { VistaApiComponent } from './vista-api/vista-api.component';
 import { HomePage } from './home/home.page';
 import { DatosPropComponent} from './datos-prop/datos-prop.component';
 import { FormularioComponent } from "./formulario/formulario.component";
+import {  RecibirObjetoComponent } from "./recibir-objeto/recibir-objeto.component";
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'formulario',
     component: FormularioComponent,
+  },
+  {
+    path: 'recibirobjeto',
+    component: RecibirObjetoComponent,
   }
 ];
 
