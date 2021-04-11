@@ -14,29 +14,24 @@
     <div>
       <ion-item>
         <ion-label>Input</ion-label>
-        <ion-input type="text" [(ngModel)]="form.input" name="input" #input="ngModel"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label>Input2</ion-label>
-        <ion-input type="text" [(ngModel)]="form.input2" name="input2" #input="ngModel"></ion-input>
+        <ion-input id="inputForm" type="text" [(ngModel)]="form.input" name="input" #input="ngModel"></ion-input>
+        <span class="hide" id="errorInput"></span>
       </ion-item>
     <ion-item>
       <ion-label>CheckBox</ion-label>
-      <ion-toggle [(ngModel)]="form.checkbox" (ngModelChange)="checkBoxCheck()"></ion-toggle>
+      <ion-toggle id="checkForm" [(ngModel)]="form.checkbox" ></ion-toggle>
+      <span class="hide" id="errorCheck"></span>
     </ion-item>
       <ion-item>
         <ion-label>Select1</ion-label>
-        <ion-select [(ngModel)]="form.option">
+        <ion-select id="selectForm" [(ngModel)]="form.select">
           <ion-select-option value="opcion1">Opcion 1</ion-select-option>
           <ion-select-option value="opcion2">Opcion2</ion-select-option>
         </ion-select>
+        <span class="hide" id="errorSelect"></span>
       </ion-item>
-    
-      <ion-item>
-        <ion-label>Ceckbox</ion-label>
-        <ion-checkbox color="primary" [(ngModel)]="form.checkbox" ionChange="checkBoxCheck1()"></ion-checkbox>
-      </ion-item>
-      <button ion-button (click)="logForm()" block>Añadir</button>
+      <ion-button color="success" id="enviarForm" (click)="logForm()">Enviar</ion-button>
+     
     </div>
    
   </ion-content>
