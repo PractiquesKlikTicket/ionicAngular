@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 export class DatosService {
 
   private formDatos={
-    input:"payaso",
+    input:"",
     select:"ss",
     check:"ss"
   }

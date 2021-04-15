@@ -15,13 +15,16 @@ import { DatosPropComponent } from "./datos-prop/datos-prop.component";
 import { FormularioComponent } from "./formulario/formulario.component";
 import {  RecibirObjetoComponent } from "./recibir-objeto/recibir-objeto.component";
 import {DatosService} from "./datos.service"
+ //Imagenes
+ import {SubirImagenComponent} from "./imagenes/subir-imagen/subir-imagen.component";
+ import {ServicioImgService } from "./imagenes/servicio-img.service"
 
 
 @NgModule({
-  declarations: [AppComponent,VistaApiComponent,HomePage, DatosPropComponent, FormularioComponent, RecibirObjetoComponent],
+  declarations: [AppComponent,VistaApiComponent,HomePage, DatosPropComponent, FormularioComponent, RecibirObjetoComponent, SubirImagenComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule,CommonModule,FormsModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, DatosService],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, DatosService, ServicioImgService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -5,7 +5,8 @@ import { DatosService } from "../datos.service";
 
 
 
-import { ToastController } from '@ionic/angular';
+
+import { NavController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-formulario',
@@ -27,7 +28,7 @@ export class FormularioComponent implements OnInit {
 
   @ViewChild(DatosPropComponent) child;
 
-  constructor(public toastController: ToastController, private router: Router, private datosService:DatosService) { }
+  constructor(public toastController: ToastController, private router: Router, private datosService:DatosService, public navCrt:NavController) { }
 
   ngOnInit() {}
 
@@ -69,8 +70,11 @@ export class FormularioComponent implements OnInit {
 
 //navigate
 
+
 this.datosService.setDatos(this.form);
 this.router.navigate(['recibirobjeto'])
+
+
 
 
 
