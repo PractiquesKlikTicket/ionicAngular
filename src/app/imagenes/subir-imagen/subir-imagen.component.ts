@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { ServicioImgService  } from "../servicio-img.service";
 
+import { Router } from "@angular/router";
+
 
 
 @Component({
@@ -11,7 +13,7 @@ import { ServicioImgService  } from "../servicio-img.service";
 })
 export class SubirImagenComponent implements OnInit {
 
-  constructor(public photoService: ServicioImgService) { }
+  constructor(public photoService: ServicioImgService, private router: Router) { }
 
   ngOnInit() {}
 
@@ -19,4 +21,10 @@ export class SubirImagenComponent implements OnInit {
     this.photoService.addNewToGallery();
   }
 
+  navigationGalery(){
+    this.router.navigate(['galeria']);
+  }
+
 }
+
+

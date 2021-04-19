@@ -18,10 +18,13 @@ import {DatosService} from "./datos.service"
  //Imagenes
  import {SubirImagenComponent} from "./imagenes/subir-imagen/subir-imagen.component";
  import {ServicioImgService } from "./imagenes/servicio-img.service"
+ import { ListadoImagenesComponent } from "./imagenes/listado-imagenes/listado-imagenes.component"
+
+//Importaciones Errores
 
 
 @NgModule({
-  declarations: [AppComponent,VistaApiComponent,HomePage, DatosPropComponent, FormularioComponent, RecibirObjetoComponent, SubirImagenComponent],
+  declarations: [AppComponent,VistaApiComponent,HomePage, DatosPropComponent, FormularioComponent, RecibirObjetoComponent, SubirImagenComponent, ListadoImagenesComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule,CommonModule,FormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, DatosService, ServicioImgService],

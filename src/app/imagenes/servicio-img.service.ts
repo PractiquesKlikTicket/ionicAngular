@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import {
   Plugins, CameraResultType, Capacitor, FilesystemDirectory,
-  CameraPhoto, CameraSource
+  CameraPhoto, CameraSource,
 } from '@capacitor/core';
 
 const { Camera, Filesystem, Storage } = Plugins;
@@ -10,18 +10,25 @@ const { Camera, Filesystem, Storage } = Plugins;
 export interface Photo {
   filepath: string;
   webviewPath: string;
-}
+};
+
+
+
+
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServicioImgService {
 
+
+
   public photos: Photo[] = [];
   private PHOTO_STORAGE: string = "photos";
   private platform: Platform;
 
-  constructor(platform: Platform) { 
+  constructor(platform: Platform) {
 
     this.platform = platform;
   }
@@ -62,9 +69,9 @@ export class ServicioImgService {
   /*public async addNewToGallery() {
 
   const capturedPhoto = await Camera.getPhoto({
-    resultType: CameraResultType.Uri, 
-    source: CameraSource.Camera, 
-    quality: 100 
+    resultType: CameraResultType.Uri,
+    source: CameraSource.Camera,
+    quality: 100
   });
 
   this.photos.unshift({
@@ -92,7 +99,7 @@ export class ServicioImgService {
       value: JSON.stringify(this.photos)
     });
   }
-  
+
 
   private async readAsBase64(cameraPhoto: CameraPhoto) {
     // Fetch the photo, read as a blob, then convert to base64 format
@@ -116,10 +123,10 @@ export class ServicioImgService {
     // Retrieve cached photo array data
     const photoList = await Storage.get({ key: this.PHOTO_STORAGE });
     this.photos = JSON.parse(photoList.value) || [];
-  
+
     // Easiest way to detect when running on the web:
     // “when the platform is NOT hybrid, do this”
-    if (!this.platform.is('hybrid')) {
+   /* if (!this.platform.is('hybrid')) {*/
       // Display the photo by reading into base64 format
       for (let photo of this.photos) {
         // Read each saved photo's data from the Filesystem
@@ -127,11 +134,11 @@ export class ServicioImgService {
             path: photo.filepath,
             directory: FilesystemDirectory.Data
         });
-  
+
         // Web platform only: Load the photo as base64 data
         photo.webviewPath = `data:image/jpeg;base64,${readFile.data}`;
       }
-    }
+   /* }*/
   }
 
 }
