@@ -3,6 +3,8 @@ import { Router } from "@angular/router";
 import { ModalController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
 
+import { ServicioImgService  } from "../servicio-img.service";
+
 @Component({
   selector: 'app-pagina-modelo',
   templateUrl: './pagina-modelo.component.html',
@@ -12,7 +14,7 @@ export class PaginaModeloComponent implements OnInit {
   @Input() photo: object;
 
 
-  constructor(private router: Router, public modalController: ModalController, public alertController: AlertController) { }
+  constructor(private router: Router, public modalController: ModalController, public alertController: AlertController, public photoService: ServicioImgService) { }
 
   ngOnInit() {}
 
@@ -35,6 +37,7 @@ export class PaginaModeloComponent implements OnInit {
           text: 'Okay',
           handler: () => {
             console.log('Confirm Okay');
+            this.borrarDeBase();
           }
         }
       ]
@@ -57,6 +60,12 @@ this.presentAlertConfirm();
 
   return(){
     this.router.navigate(['galeria'])
+  }
+
+  borrarDeBase(){
+    this.photoService.deleteImage(this.photo)
+
+    this.dismiss();
   }
 
 }

@@ -141,4 +141,26 @@ export class ServicioImgService {
    /* }*/
   }
 
+  public async deleteImage(image){
+
+    const photoList = await Storage.get({ key: this.PHOTO_STORAGE });
+    this.photos = JSON.parse(photoList.value) || [];
+
+    console.log(this.photos)
+    let aa=this.photos.findIndex(elem=>elem.filepath==image.filepath);
+    console.log(aa)
+
+this.photos.splice(aa,1)
+
+await Storage.remove({ key: this.PHOTO_STORAGE }),
+
+await Storage.set({
+  key: this.PHOTO_STORAGE,
+  value: JSON.stringify(this.photos)
+});
+
+
+
+}
+
 }
