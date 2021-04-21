@@ -18,7 +18,7 @@ import {DatosService} from "./datos.service"
  //Imagenes
  import {SubirImagenComponent} from "./imagenes/subir-imagen/subir-imagen.component";
  import {ServicioImgService } from "./imagenes/servicio-img.service"
- import { ListadoImagenesComponent } from "./imagenes/listado-imagenes/listado-imagenes.component"
+ import { ListadoImagenesComponent } from "./imagenes/listado-imagenes/listado-imagenes.component";
 
 //Importaciones Errores
 

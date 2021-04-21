@@ -54,6 +54,7 @@ export class PaginaModeloComponent implements OnInit {
     });
   }
   eliminar(){
+    console.log(this.photo)
 console.log("Mayor")
 this.presentAlertConfirm();
   }

@@ -10,14 +10,30 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-grid>
-    <ion-row>
-    <ion-col size="6"
-      *ngFor="let photo of photoService.photos; index as position"   >
-        <ion-img   [src]="photo.webviewPath"   (click)="presentModal(photo)"></ion-img>
-    </ion-col>
-    </ion-row>
-  </ion-grid>
+  
+
+<ion-list>
+
+
+  <ion-item-sliding  *ngFor="let photo of photoService.photos; index as position">
+
+
+    
+
+    <ion-item> 
+      
+      
+    <ion-label> <ion-img   [src]="photo.webviewPath"   (click)="presentModal(photo)"></ion-img></ion-label>
+    
+    </ion-item>
+
+    <ion-item-options side="end">
+      <ion-item-option (click)="eliminar(photo)" color="danger" ><ion-icon name="trash"></ion-icon></ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+
+   
+  </ion-list>
 
   <ion-fab vertical="bottom" horizontal="left" slot="fixed">
     <ion-fab-button (click)="navigationImport()">
