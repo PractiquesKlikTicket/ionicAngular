@@ -165,18 +165,4 @@ await Storage.set({
 
 }
 
-
-public async openFile(){
-
- /* const fileUpload= await Filesystem.getUri({
-directory: FilesystemDirectory.Documents,
-path: "photo.filepath"
-
-
-  });*/
-
-  this.Capacitor.appendFile(options: FileAppendOptions) => Promise<FileAppendResult>
-
-}
-
 }
